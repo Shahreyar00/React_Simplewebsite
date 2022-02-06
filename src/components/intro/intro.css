@@ -1,0 +1,159 @@
+.i{
+    display: flex;
+    height: 100vh;
+}
+
+.i-left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.i-right{
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.i-left-wrapper{
+    padding: 50px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sp1{
+    height: 10px;
+    width: 35px;
+    background-color: #ff4e50;
+    border-radius: 50%;
+}
+
+.sp2{
+    height: 10px;
+    width: 25px;
+    background: #ff4e50;
+    border-radius: 50%;
+}
+
+.i-intro{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.i-name{
+    font-size: 60px;
+    font-family: 'ephesis', sans-serif;
+    transition: transform 0.5s ease-in-out;
+}
+
+.i-name:hover{
+    transform: translateX(15px);
+}
+
+.i-title{
+    height: 50px;
+    overflow: hidden;
+}
+
+.i-title-wrapper{
+    height: 100%;
+    animation: move 8s ease-in-out infinite alternate;
+}
+
+@keyframes move{
+    33.3%{
+        transform: translateY(-50px);
+    }
+    66.6%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(-150px);
+    }
+}
+
+.i-title-item{
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff4e50;
+    display: flex;
+    align-items: center;
+}
+
+.i-scroll{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.i-bg{
+    width: 500px;
+    height: 530px;
+    border-radius: 32%;
+    background-color: black;
+    position: relative;
+}
+
+.i-img{
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40%;
+}
+
+.glow::before,
+.glow::after{
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    border-radius: 32%;
+    background: linear-gradient(45deg, #e6fb04, #ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
+    background-size: 400%;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    z-index: -1;
+    animation: animate 20s linear infinite alternate;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+.glow::after{
+    filter: blur(50px);
+    opacity: 0.4;
+}
+
+
+@media screen and (max-width:480px){
+    .i{
+        flex-direction: column;
+    }
+    .i-left-wrapper{
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+    }
+    .i-desc{
+        display: none;
+    }
+}
+
