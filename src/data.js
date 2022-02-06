@@ -4,31 +4,31 @@ export const products = [
     {
       id: 1,
       img: "../../img/fulls.png",
-      link: "http://lama.dev",
+      link: "",
     },
     {
       id: 2,
       img: "../../img/fulls.png",
-      link: "http://lama.dev",
+      link: "",
     },
     {
       id: 3,
       img: "../../img/fulls.png",
-      link: "http://lama.dev",
+      link: "",
     },
     {
       id: 4,
       img: "../../img/fulls.png",
-      link: "http://lama.dev",
+      link: "",
     },
     {
       id: 5,
       img: "../../img/fulls.png",
-      link: "http://lama.dev",
+      link: "",
     },
     {
       id: 6,
       img: "../../img/fulls.png",
-      link: "http://lama.dev",
+      link: "",
     },
   ];
